@@ -1,0 +1,13 @@
+<config>
+	<append xpath="/xui/ruleset">
+		<window_group name="workstation_Research Station" controller="XUiC_WorkstationWindowGroup">
+			<window name="ResearchBackground"/>
+			<window name="ResearchOverlay"/>
+			<window name="RsearchCraftingList"/>
+			<window name="ResearchInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+	</append>
+</config>

@@ -1,0 +1,32 @@
+<configs>
+	<append xpath="/items/item[@name='thrownDynamite']">
+		<effect_group tiered="false">
+			<passive_effect name="BlockDamage" operation="base_add" value="-2000"/>
+			<display_value name="dExDamageBlock" value="-2000"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='ammoRocketHE']">
+		<effect_group tiered="false">
+			<passive_effect name="BlockDamage" operation="base_add" value="-1000"/>
+			<display_value name="dExDamageBlock" value="-1000"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='ammoShotgunBreachingSlug']">
+		<effect_group tiered="false">
+			<passive_effect name="BlockDamage" operation="base_add" value="1000" tags="door,wood"/>
+			<display_value name="dDamageDoor" value="1000"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltExploding']">
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="base_set" value="250"/>
+			<display_value name="dExDamageEntity" value="500"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='ammoArrowExploding']">
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="base_set" value="180"/>
+			<display_value name="dExDamageEntity" value="360"/>
+		</effect_group>
+	</append>
+</configs>

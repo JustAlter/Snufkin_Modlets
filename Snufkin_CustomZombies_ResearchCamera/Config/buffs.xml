@@ -1,0 +1,100 @@
+<configs>
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ResearchCameraBase"/>
+	</append>
+	<append xpath="/buffs">
+		<buff name="ResearchCameraBase" hidden="true" remove_on_death="false">
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value="@scorcherresearch">
+					<requirement name="EntityTagCompare" target="other" tags="scorcher"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@bansheeresearch">
+					<requirement name="EntityTagCompare" target="other" tags="banshee"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@mantisresearch">
+					<requirement name="EntityTagCompare" target="other" tags="mantis"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@geistresearch">
+					<requirement name="EntityTagCompare" target="other" tags="geist"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@scarecrowresearch">
+					<requirement name="EntityTagCompare" target="other" tags="scarecrow"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@sirenresearch">
+					<requirement name="EntityTagCompare" target="other" tags="siren"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@undertakerresearch">
+					<requirement name="EntityTagCompare" target="other" tags="undertaker"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@bomberresearch">
+					<requirement name="EntityTagCompare" target="other" tags="bomber"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@juggernautresearch">
+					<requirement name="EntityTagCompare" target="other" tags="juggernaut"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@cowheadresearch">
+					<requirement name="EntityTagCompare" target="other" tags="cowhead"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@parasiteresearch">
+					<requirement name="EntityTagCompare" target="other" tags="parasite"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@wendigoresearch">
+					<requirement name="EntityTagCompare" target="other" tags="wendigo"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@wrestlerresearch">
+					<requirement name="EntityTagCompare" target="other" tags="wrestler"/>
+				</passive_effect>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@archonresearch">
+					<requirement name="EntityTagCompare" target="other" tags="archon"/>
+				</passive_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="archonresearchC" operation="set" value="@archonresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="archonresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="bansheeresearchC" operation="set" value="@bansheeresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="bansheeresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="bomberresearchC" operation="set" value="@bomberresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="bomberresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="cowheadresearchC" operation="set" value="@cowheadresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="cowheadresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="geistresearchC" operation="set" value="@geistresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="geistresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="juggernautresearchC" operation="set" value="@juggernautresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="juggernautresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="mantisresearchC" operation="set" value="@mantisresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="mantisresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="parasiteresearchC" operation="set" value="@parasiteresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="parasiteresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="scarecrowresearchC" operation="set" value="@scarecrowresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="scarecrowresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="scorcherresearchC" operation="set" value="@scorcherresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="scorcherresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="sirenresearchC" operation="set" value="@sirenresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="sirenresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="undertakerresearchC" operation="set" value="@undertakerresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="undertakerresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wendigoresearchC" operation="set" value="@wendigoresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wendigoresearchC" operation="multiply" value="1240"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wrestlerresearchC" operation="set" value="@wrestlerresearch"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wrestlerresearchC" operation="multiply" value="1240"/>
+				
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@archonresearchC" tags="Archon Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@bansheeresearchC" tags="Banshee Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@bomberresearchC" tags="Bomber Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@cowheadresearchC" tags="Cowhead Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@geistresearchC" tags="Geist Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@juggernautresearchC" tags="Juggernaut Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@mantisresearchC" tags="Mantis Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@parasiteresearchC" tags="Parasite Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@scarecrowresearchC" tags="Scarecrow Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@scorcherresearchC" tags="Scorcher Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@sirenresearchC" tags="Siren Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@undertakerresearchC" tags="Undertaker Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@wendigoresearchC" tags="Wendigo Research"/>
+				<passive_effect name="CraftingIngredientCount" operation="base_add" value="@wrestlerresearchC" tags="Wrestler Research"/>
+			</effect_group>
+		</buff>
+		<buff name="ResearchCameraTagged" hidden="true" remove_on_death="false">
+		</buff>
+	</append>
+</configs>

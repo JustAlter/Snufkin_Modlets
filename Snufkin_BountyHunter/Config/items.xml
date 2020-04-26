@@ -1,0 +1,17 @@
+<configs>
+	<append xpath="/items">
+		<item name="Wanted poster">
+			<property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="resourcePaper"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="CustomIconTint" value="255,215,0"/>
+			<property name="Meshfile" value="#Other/Items?Misc/paper.FBX"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/paper.FBX"/>
+			<property name="Material" value="MresourcePaper"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="80"/>
+		</item>
+	</append>
+</configs>

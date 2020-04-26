@@ -1,0 +1,8 @@
+<configs>
+	<append xpath="/items/item[@name='meleeToolAuger']">
+		<effect_group tiered="false">
+			<passive_effect name="CraftingTime" operation="base_add" value="0,-120,-240,-360,-480,-600" tier="1,2,3,4,5,6" tags="autominer"/>
+			<passive_effect name="CraftingTime" operation="base_add" value="-20" tags="autominer"/>
+		</effect_group>
+	</append>
+</configs>

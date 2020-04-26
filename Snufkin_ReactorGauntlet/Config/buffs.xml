@@ -1,0 +1,80 @@
+<configs>
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+	</append>
+	<append xpath="/buffs">
+		<buff name="buffReactorDisplay" icon="ui_game_symbol_lightbulb" icon_color="0,255,255" icon_blink="false">
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>
+			<display_value value="$ReactorCharge"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$ReactorCharge" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$ReactorCharge" operation="set" value="100">
+					<requirement name="CVarCompare" cvar="$ReactorCharge" operation="GTE" value="100"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		<buff name="buffRadiationElement" hidden="true">
+			<damage_type value="heat"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffRadiationDuration" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffRadiationDuration" operation="set" value="0"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffRadiationDuration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffRadiationDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningElement"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffIsOnRadiation"/>
+			</effect_group>
+		</buff>
+		<buff name="buffIsOnRadiation" name_key="buffRadiation03Name" description_key="buffRadiation03Desc" tooltip_key="buffRadiation03Tooltip" icon="ui_game_symbol_radiation" icon_color="255,0,0" icon_blink="true">
+			<damage_type value="Heat"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value="1"/>
+			<display_value value=".buffIsOnRadiationDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffIsOnRadiationDisplay" operation="set" value="@$buffRadiationDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffIsOnRadiationDisplay" operation="set" value="@$buffRadiationDuration">
+					<requirement name="CVarCompare" cvar="$buffRadiationDuration" operation="GT" value="@.buffIsOnRadiationDisplay"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<requirement name="NotHasBuff" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffIsOnRadiation"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,10" value="1,1"/>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="10,50" value="1,30"/>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="50,1000" value="40,1000"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade=".7" effect_name="Hot">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade=".7" effect_name="Hot">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRadiation03">
+					<requirement name="CVarCompare" cvar="_biomeradiation" operation="LT" value="2.5"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".6" fade="2"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
+			</effect_group>
+		</buff>
+		<buff name="buffFuseDash" hidden="true">
+			<stack_type value="ignore"/>
+			<effect_group>
+			</effect_group>
+		</buff>
+	</append>
+</configs>

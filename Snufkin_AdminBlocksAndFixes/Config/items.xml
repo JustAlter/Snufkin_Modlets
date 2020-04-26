@@ -1,0 +1,27 @@
+<configs>
+	<set xpath="/items/item[starts-with(@name, 'apparel')]/property[@name='Stacknumber']/@value">1</set>
+	<set xpath="/items/item[starts-with(@name, 'vehicle')]/property[@name='Stacknumber']/@value">1</set>
+	<append xpath="/items">
+		<item name="drugXP">
+			<property name="Tags" value="medical"/>
+			<property name="DisplayType" value="medicalVitamins"/>
+			<property name="CustomIcon" value="drugVitamins"/>
+			<property name="CustomIconTint" value="224,84,13"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/></property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100000"/>
+			</effect_group>
+		</item>
+	</append>
+</configs>

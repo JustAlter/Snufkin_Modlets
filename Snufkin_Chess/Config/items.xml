@@ -1,0 +1,125 @@
+<configs>
+	<append xpath="/items">
+	
+	
+<item name="chessPiecebase">
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourcePaper"/>
+	<property name="Weight" value="1"/>
+	<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+</item>
+<item name="Pawn_W">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_p"/>
+	<property name="CustomIconTint" value="255,0,0"/>
+	<property name="Stacknumber" value="8"/>
+</item>
+<item name="Knight_W">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_n"/>
+	<property name="CustomIconTint" value="255,0,0"/>
+	<property name="Stacknumber" value="2"/>
+</item>
+<item name="Rook_W">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_r"/>
+	<property name="CustomIconTint" value="255,0,0"/>
+	<property name="Stacknumber" value="2"/>
+</item>
+<item name="Bishop_W">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_b"/>
+	<property name="CustomIconTint" value="255,0,0"/>
+	<property name="Stacknumber" value="2"/>
+</item>
+<item name="King_W">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_k"/>
+	<property name="CustomIconTint" value="255,0,0"/>
+	<property name="Stacknumber" value="1"/>
+</item>
+<item name="Queen_W">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_q"/>
+	<property name="CustomIconTint" value="255,0,0"/>
+	<property name="Stacknumber" value="1"/>
+</item>
+
+<item name="Pawn_B">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_p"/>
+	<property name="CustomIconTint" value="0,0,255"/>
+	<property name="Stacknumber" value="8"/>
+</item>
+<item name="Knight_B">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_n"/>
+	<property name="CustomIconTint" value="0,0,255"/>
+	<property name="Stacknumber" value="2"/>
+</item>
+<item name="Rook_B">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_r"/>
+	<property name="CustomIconTint" value="0,0,255"/>
+	<property name="Stacknumber" value="2"/>
+</item>
+<item name="Bishop_B">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_b"/>
+	<property name="CustomIconTint" value="0,0,255"/>
+	<property name="Stacknumber" value="2"/>
+</item>
+<item name="King_B">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_k"/>
+	<property name="CustomIconTint" value="0,0,255"/>
+	<property name="Stacknumber" value="1"/>
+</item>
+<item name="Queen_B">
+	<property name="Extends" value="chessPiecebase"/>
+	<property name="CustomIcon" value="metalSignLetter_q"/>
+	<property name="CustomIconTint" value="0,0,255"/>
+	<property name="Stacknumber" value="1"/>
+</item>
+
+
+<item name="ChessSetLoot">
+	<property name="CustomIcon" value="metalSignLetter_c"/><property name="ItemTypeIcon" value="bundle"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourcePaper"/>
+	<property name="Stacknumber" value="1"/> 
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="900"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Use_time" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="Create_item" value="Pawn_W,Knight_W,Rook_W,Bishop_W,King_W,Queen_W,Pawn_B,Knight_B,Rook_B,Bishop_B,King_B,Queen_B,chessTable"/>
+		<property name="Create_item_count" value="8,2,2,2,1,1,8,2,2,2,1,1,1"/>
+	</property>
+</item>
+<item name="ChessSet">
+	<property name="CustomIcon" value="metalSignLetter_c"/><property name="ItemTypeIcon" value="bundle"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourcePaper"/>
+	<property name="Stacknumber" value="1"/> 
+	<property name="Weight" value="0"/>
+	<property name="EconomicValue" value="900"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Use_time" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="Create_item" value="Pawn_W,Knight_W,Rook_W,Bishop_W,King_W,Queen_W,Pawn_B,Knight_B,Rook_B,Bishop_B,King_B,Queen_B"/>
+		<property name="Create_item_count" value="8,2,2,2,1,1,8,2,2,2,1,1"/>
+	</property>
+</item>
+	</append>
+</configs>

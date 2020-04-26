@@ -1,0 +1,119 @@
+<configs>
+<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+	<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="HBEnemy"/>
+	<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="pegasus">
+		<requirement name="EntityTagCompare"  target="other" tags="test"/>
+		<requirement name="HitLocation" body_parts="Head"/>
+	</triggered_effect>
+</append>
+	<append xpath="/buffs">
+		<buff name="HBEnemy" hidden="true">
+			<duration value="5"/>
+			<update_rate value=".1"/>
+			<stack_type value="replace"/>
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="bear"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddPart" part="Base" prefab="#Other/Items?Items/Misc/sack.fbx" parentTransform="Spine" localPos="-.5,2,0" localRot="0,0,-90"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Spine" transform_path="sackMesh"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Spine" transform_path="sack_LOD1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Spine" transform_path="sack_LOD2"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="!EntityTagCompare" target="self" tags="umazombie"/>
+				<requirement name="EntityTagCompare" target="self" tags="zombie,animal"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddPart" part="Base" prefab="#Other/Items?Items/Misc/sack.fbx" parentTransform="Origin" localPos="-.5,2,0" localRot="0,0,-90"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Origin" transform_path="sackMesh"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Origin" transform_path="sack_LOD1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Origin" transform_path="sack_LOD2"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="EntityTagCompare" tags="umazombie"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddPart" part="Base" prefab="#Other/Items?Items/Misc/sack.fbx" parentTransform="Hips" localPos="-1.1,-.6,.1" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Hips" transform_path="sackMesh"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Hips" transform_path="sack_LOD1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Hips" transform_path="sack_LOD2"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemovePart" part="BH1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemovePart" part="BH2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemovePart" part="BH3"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemovePart" part="BH4"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".8"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH1" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main1" localPos="0,.275,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH2" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main2" localPos="0,.5,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH3" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main3" localPos="0,.72,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH4" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main4" localPos="0,1.1,0" localRot="0,0,180"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".7"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value=".8"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH1" prefab="#Other/Items?Food/bottledRiverWaterPrefab.prefab" parentTransform="main1" localPos="0,.275,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH2" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main2" localPos="0,.5,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH3" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main3" localPos="0,.72,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH4" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main4" localPos="0,1.1,0" localRot="0,0,180"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".6"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value=".7"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH1" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main1" localPos="0,.275,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH2" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main2" localPos="0,.5,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH3" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main3" localPos="0,.72,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH4" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main4" localPos="0,1.1,0" localRot="0,0,180"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".5"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value=".6"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH1" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main1" localPos="0,.275,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH2" prefab="#Other/Items?Food/bottledRiverWaterPrefab.prefab" parentTransform="main2" localPos="0,.5,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH3" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main3" localPos="0,.72,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH4" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main4" localPos="0,1.1,0" localRot="0,0,180"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".4"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH1" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main1" localPos="0,.275,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH2" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main2" localPos="0,.5,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH3" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main3" localPos="0,.72,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH4" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main4" localPos="0,1.1,0" localRot="0,0,180"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".3"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value=".4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH1" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main1" localPos="0,.275,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH2" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main2" localPos="0,.5,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH3" prefab="#Other/Items?Food/bottledRiverWaterPrefab.prefab" parentTransform="main3" localPos="0,.72,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH4" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main4" localPos="0,1.1,0" localRot="0,0,180"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".2"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value=".3"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH1" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main1" localPos="0,.275,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH2" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main2" localPos="0,.5,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH3" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main3" localPos="0,.72,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH4" prefab="#Other/Items?Food/redTeaPrefab.prefab" parentTransform="main4" localPos="0,1.1,0" localRot="0,0,180"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="0"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LT" value=".2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH1" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main1" localPos="0,.275,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH2" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main2" localPos="0,.5,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH3" prefab="#Other/Items?Food/mason_jarPrefab.prefab" parentTransform="main3" localPos="0,.72,0" localRot="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddPart" part="BH4" prefab="#Other/Items?Food/bottledRiverWaterPrefab.prefab" parentTransform="main4" localPos="0,1.1,0" localRot="0,0,180"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfDied" action="RemovePart" part="BH1"/>
+				<triggered_effect trigger="onSelfDied" action="RemovePart" part="BH2"/>
+				<triggered_effect trigger="onSelfDied" action="RemovePart" part="BH3"/>
+				<triggered_effect trigger="onSelfDied" action="RemovePart" part="BH4"/>
+				<triggered_effect trigger="onSelfDied" action="RemovePart" part="Base"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePart" part="BH1"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePart" part="BH2"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePart" part="BH3"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePart" part="BH4"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePart" part="Base"/>
+			</effect_group>
+		</buff>
+	</append>
+</configs>

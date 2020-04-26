@@ -1,0 +1,10 @@
+<config>
+	<append xpath="/recipes">
+		<recipe name="casinoCoin" count="1" tags="bountypay">
+			<ingredient name="Wanted poster" count="1"/>
+		</recipe>
+		<recipe name="Wanted poster" count="1" craft_time="20">
+			<ingredient name="casinoCoin" count="750"/>
+		</recipe>
+	</append>
+</config>

@@ -1,0 +1,323 @@
+<configs>
+	<append xpath="/item_modifiers">
+		<item_modifier name="Fuse Base">
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		</item_modifier>
+		<item_modifier name="Flame Fuse I" modifier_tags="flame" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="255,0,0"/>
+			<property name="DisplayType" value="FuseFlm"/>
+			<effect_group>
+				<display_value name="brnChance" value=".3"/>
+				<display_value name="brnEffect" value="5"/>
+			</effect_group>
+			<effect_group name="new Fire Proc" tiered="false">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="5"/>
+			</effect_group>
+			<effect_group name="always refresh existing Fire Proc" tiered="false">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+				<requirement name="HasBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="5"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Flame Fuse II" modifier_tags="flame" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="255,0,0"/>
+			<property name="DisplayType" value="FuseFlm"/>
+			<effect_group>
+				<display_value name="brnChance" value=".4"/>
+				<display_value name="brnEffect" value="7.5"/>
+			</effect_group>
+			<effect_group name="new Fire Proc" tiered="false">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="40"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="7.5"/>
+			</effect_group>
+			<effect_group name="always refresh existing Fire Proc" tiered="false">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+				<requirement name="HasBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="7.5"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Flame Fuse III" modifier_tags="flame" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="255,0,0"/>
+			<property name="DisplayType" value="FuseFlm"/>
+			<effect_group>
+				<display_value name="brnChance" value=".5"/>
+				<display_value name="brnEffect" value="10"/>
+			</effect_group>
+			<effect_group name="new Fire Proc" tiered="false">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10"/>
+			</effect_group>
+			<effect_group name="always refresh existing Fire Proc" tiered="false">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+				<requirement name="HasBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Electric Fuse I" modifier_tags="electric" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="8, 146, 208"/>
+			<property name="DisplayType" value="FuseShk"/>
+			<effect_group>
+				<display_value name="shkChance" value=".1"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Electric Fuse II" modifier_tags="electric" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="8, 146, 208"/>
+			<property name="DisplayType" value="FuseShk"/>
+			<effect_group>
+				<display_value name="shkChance" value=".2"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Electric Fuse III" modifier_tags="electric" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="8, 146, 208"/>
+			<property name="DisplayType" value="FuseShk"/>
+			<effect_group>
+				<display_value name="shkChance" value=".3"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Radiation Fuse I" modifier_tags="radiation" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="45, 243, 26"/>
+			<property name="DisplayType" value="FuseRad"/>
+			<effect_group>
+				<display_value name="radChance" value=".3"/>
+				<display_value name="radEffect" value="3"/>
+			</effect_group>
+			<effect_group name="new Rad Proc" tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffRadiationDuration" operation="set" value="3"/>
+			</effect_group>
+			<effect_group name="always refresh existing Rad Proc" tiered="false">
+				<requirement name="HasBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffRadiationDuration" operation="set" value="3"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Radiation Fuse II" modifier_tags="radiation" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="45, 243, 26"/>
+			<property name="DisplayType" value="FuseRad"/>
+			<effect_group>
+				<display_value name="radChance" value=".4"/>
+				<display_value name="radEffect" value="6"/>
+			</effect_group>
+			<effect_group name="new Rad Proc" tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="40"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffRadiationDuration" operation="set" value="6"/>
+			</effect_group>
+			<effect_group name="always refresh existing Rad Proc" tiered="false">
+				<requirement name="HasBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffRadiationDuration" operation="set" value="6"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Radiation Fuse III" modifier_tags="radiation" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="45, 243, 26"/>
+			<property name="DisplayType" value="FuseRad"/>
+			<effect_group>
+				<display_value name="radChance" value=".5"/>
+				<display_value name="radEffect" value="9"/>
+			</effect_group>
+			<effect_group name="new Rad Proc" tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffRadiationDuration" operation="set" value="9"/>
+			</effect_group>
+			<effect_group name="always refresh existing Rad Proc" tiered="false">
+				<requirement name="HasBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffRadiationElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffRadiationDuration" operation="set" value="9"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Agility Fuse I" modifier_tags="attAgility" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="0, 152, 179"/>
+			<property name="DisplayType" value="FuseAgi"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Agility Fuse II" modifier_tags="attAgility" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="0, 152, 179"/>
+			<property name="DisplayType" value="FuseAgi"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Agility Fuse III" modifier_tags="attAgility" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="0, 152, 179"/>
+			<property name="DisplayType" value="FuseAgi"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="3"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Perception Fuse I" modifier_tags="attPerception" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="230, 230, 0"/>
+			<property name="DisplayType" value="FusePer"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Perception Fuse II" modifier_tags="attPerception" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="230, 230, 0"/>
+			<property name="DisplayType" value="FusePer"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Perception Fuse III" modifier_tags="attPerception" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="230, 230, 0"/>
+			<property name="DisplayType" value="FusePer"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="3"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Intellect Fuse I" modifier_tags="attIntellect" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="115, 230, 0"/>
+			<property name="DisplayType" value="FuseInt"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Intellect Fuse II" modifier_tags="attIntellect" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="115, 230, 0"/>
+			<property name="DisplayType" value="FuseInt"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Intellect Fuse III" modifier_tags="attIntellect" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="115, 230, 0"/>
+			<property name="DisplayType" value="FuseInt"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="3"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Strength Fuse I" modifier_tags="attStrength" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="179, 116, 0"/>
+			<property name="DisplayType" value="FuseStr"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Strength Fuse II" modifier_tags="attStrength" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="179, 116, 0"/>
+			<property name="DisplayType" value="FuseStr"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Strength Fuse III" modifier_tags="attStrength" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="179, 116, 0"/>
+			<property name="DisplayType" value="FuseStr"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="3"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Fortitude Fuse I" modifier_tags="attFortitude" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="179, 27, 0"/>
+			<property name="DisplayType" value="FuseFor"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Fortitude Fuse II" modifier_tags="attFortitude" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="179, 27, 0"/>
+			<property name="DisplayType" value="FuseFor"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Fortitude Fuse III" modifier_tags="attFortitude" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="179, 27, 0"/>
+			<property name="DisplayType" value="FuseFor"/>
+			<effect_group>
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="3"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="Dash Fuse I" modifier_tags="dash" installable_tags="reactorgauntlet" type="attachment">
+			<property name="Extends" value="Fuse Base"/>
+			<property name="CustomIcon" value="carBattery"/>
+			<property name="CustomIconTint" value="179, 27, 0"/>
+			<property name="DisplayType" value="FuseFor"/>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$effectbalrog" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfItemActivate" action="PlaySound" sound="x12on"/>
+				<triggered_effect trigger="onSelfItemDeactivate" action="PlaySound" sound="x12on"/>
+			</effect_group>
+		</item_modifier>
+	</append>
+</configs>

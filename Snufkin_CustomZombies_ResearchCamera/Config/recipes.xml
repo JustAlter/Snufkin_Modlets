@@ -1,0 +1,36 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="Research Camera" count="1" craft_area="workbench" craft_time="120">
+			<ingredient name="motionsensor" count="1"/>
+			<ingredient name="resourceMechanicalParts" count="40"/>
+			<ingredient name="resourceElectricParts" count="20"/>
+		</recipe>
+		<recipe name="Research Station" count="1" craft_area="workbench" craft_time="20">
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="40"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+		</recipe>
+		<recipe name="Photographic film" count="1" craft_area="chemistryStation" craft_time="20">
+			<ingredient name="resourceAcid" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="8"/>
+			<ingredient name="resourcePaper" count="10"/>
+		</recipe>
+		<recipe name="Research Points" count="0" craft_area="Research Station" tags="ResearchStation" craft_time="0">
+			<ingredient name="Archon Research" count="0"/>
+			<ingredient name="Banshee Research" count="0"/>
+			<ingredient name="Bomber Research" count="0"/>
+			<ingredient name="Cowhead Research" count="0"/>
+			<ingredient name="Geist Research" count="0"/>
+			<ingredient name="Juggernaut Research" count="0"/>
+			<ingredient name="Mantis Research" count="0"/>
+			<ingredient name="Parasite Research" count="0"/>
+			<ingredient name="Scarecrow Research" count="0"/>
+			<ingredient name="Scorcher Research" count="0"/>
+			<ingredient name="Siren Research" count="0"/>
+			<ingredient name="Undertaker Research" count="0"/>
+			<ingredient name="Wendigo Research" count="0"/>
+			<ingredient name="Wrestler Research" count="0"/>
+		</recipe>
+	</append>
+</configs>

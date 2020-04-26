@@ -1,0 +1,108 @@
+<configs>
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="BountyPassive">
+			<requirement name="NotHasBuff" buff="BountyPassive"/>
+		</triggered_effect>
+	</append>
+	<append xpath="/buffs">
+		<buff name="BountyPassive" hidden="true">
+			<update_rate value=".1"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="500">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="5"/>
+					<requirement name="PlayerLevel" target="other" operation="LT" value="10"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="1000">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="10"/>
+					<requirement name="PlayerLevel" target="other" operation="LT" value="25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="2000">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="25"/>
+					<requirement name="PlayerLevel" target="other" operation="LT" value="50"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="5000">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="50"/>
+					<requirement name="PlayerLevel" target="other" operation="LT" value="100"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="10000">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="100"/>
+					<requirement name="PlayerLevel" target="other" operation="LT" value="150"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="30000">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="150"/>
+					<requirement name="PlayerLevel" target="other" operation="LT" value="200"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="40000">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="200"/>
+					<requirement name="PlayerLevel" target="other" operation="LT" value="250"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="100000">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="250"/>
+					<requirement name="PlayerLevel" target="other" operation="LT" value="300"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="$bount" operation="set" value="150000">
+					<requirement name="NotHasBuff" buff="Bounty"/>
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="300"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" target="self" buff="Bounty">
+					<requirement name="PlayerLevel" target="other" operation="GTE" value="5"/>
+					<requirement name="NotHasBuff" target="other" buff="buffNearDeathTrauma"/>
+					<requirement name="PlayerItemCount" item_name="Wanted poster" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="Bountyoff">
+					<requirement name="PlayerItemCount" item_name="Wanted poster" operation="GT" value="1"/>
+					<requirement name="NotHasBuff" target="self" buff="Bountyoff"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="Bountyon">
+					<requirement name="PlayerItemCount" item_name="Wanted poster" operation="Equals" value="1"/>
+					<requirement name="NotHasBuff" target="self" buff="Bountyon"/>
+					<requirement name="NotHasBuff" target="self" buff="Bounty"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		<buff name="Bountyoff" description_key="bounty" tooltip_key="RECUERDA QUE DEBES LLEVAR CONTIGO SOLO 1 POSTER" icon="ui_game_symbol_coin" icon_color="255,0,0">
+			<update_rate value=".1"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Bountyoff">
+					<requirement name="PlayerItemCount" item_name="Wanted poster" operation="LTE" value="1"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		<buff name="Bountyon" description_key="bounty" tooltip_key="AHORA PODRAS COBRAR UNA RECOMPENSA POR LA CABEZA DE UN JUGADOR" icon="ui_game_symbol_coin" icon_color="100,100,100">
+			<update_rate value=".1"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Bountyon">
+					<requirement name="PlayerItemCount" item_name="Wanted poster" operation="NotEquals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Bountyon">
+					<requirement name="HasBuff" target="self" buff="Bounty"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		<buff name="Bounty" description_key="bounty" tooltip_key="HAS MATADO A UN JUGADOR, NO OLVIDES COBRAR TU RECOMPENSA" icon="ui_game_symbol_coin" icon_color="255,240,0">
+			<update_rate value=".1"/>
+			<stack_type value="ignore"/>
+			<display_value value="$bount"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Bounty">
+					<requirement name="PlayerItemCount" item_name="Wanted poster" operation="GT" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Bounty">
+					<requirement name="PlayerItemCount" item_name="Wanted poster" operation="Equals" value="0"/>
+				</triggered_effect>
+				<passive_effect name="CraftingOutputCount" operation="base_set" value="@$bount" tags="bountypay"/>
+			</effect_group>
+		</buff>
+	</append>
+</configs>

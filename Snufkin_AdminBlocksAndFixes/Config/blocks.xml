@@ -1,0 +1,772 @@
+<configs>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'garageDoor')]/property[@name='OnlySimpleRotations']/@value">false</set>
+	<append xpath="/entity_classes/entity_class[starts-with(@name, 'garageDoor')]">
+		<property name="AllowAllRotations" value="true"/>
+	</append>
+	<append xpath="/blocks">
+		<block name="admin_garageDoorIndustrial_Powered">
+			<property name="Extends" value="garageDoorIndustrial_Powered"/>
+			<property name="CustomIcon" value="garageDoorIndustrial_Powered"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_houseFrontDoor1_v1">
+			<property name="DescriptionKey" value="doorGroupDesc"/>
+			<property name="Class" value="DoorSecure"/>
+			<property name="CustomIcon" value="houseFrontDoor1_v1"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="LightOpacity" value="1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Doors/house_frontDoor1_v1Prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Tags" value="door"/>
+			<property name="BlockTag" value="Door"/>
+			<property name="Place" value="Door"/>
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="AllowAllRotations" value="true"/>
+			<property name="OpenSound" value="open_door_wood"/>
+			<property name="CloseSound" value="close_door_wood"/>
+		</block>
+		<block name="admin_motionsensor">
+			<property name="Extends" value="motionsensor"/>
+			<property name="CustomIcon" value="motionsensor"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_houseFrontDoor2_v1">
+			<property name="Extends" value="admin_houseFrontDoor1_v1"/>
+			<property name="CustomIcon" value="houseFrontDoor2_v1"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Model" value="Entities/Doors/house_frontDoor2_v1Prefab"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="70"/>
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_garageDoorIndustrial">
+			<property name="Extends" value="garageDoorIndustrial"/>
+			<property name="CustomIcon" value="garageDoorIndustrial"/>
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="AllowAllRotations" value="true"/>
+			<property name="OnlySimpleRotations" value="false"/>
+			<property name="AllowAllRotations" value="true"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_playerSignWood2x5">
+			<property name="Extends" value="playerSignWood2x5"/>
+			<property name="CustomIcon" value="playerSignWood1x1"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_playerSignWood1x3">
+			<property name="Extends" value="playerSignWood1x3"/>
+			<property name="CustomIcon" value="playerSignWood1x1"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_playerSignWood1x1">
+			<property name="Extends" value="playerSignWood1x1"/>
+			<property name="CustomIcon" value="playerSignWood1x1"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_Fluorescent">
+			<property name="Class" value="PoweredLight"/>
+			<property name="Extends" value="porchLight01"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="lightPlayerGroupDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,generatorbankSchematic"/>
+			<property name="CustomIcon" value="ceilingLight07"/>
+			<property name="RequiredPower" value="0"/>
+			<property name="RuntimeSwitch" value="true"/>
+			<property name="Material" value="Mglass"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Model" value="Entities/Lighting/player_ceilingLight07Prefab"/>
+			<property name="HandleFace" value="Top"/>
+			<property name="TakeDelay" value="5"/>
+		</block>
+		<block name="admin_wroughtIronFenceSheet">
+			<property name="Extends" value="wroughtIronFenceSheet"/>
+			<property name="CustomIcon" value="wroughtIronFenceSheet"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="wroughtIronFenceSheet"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/></property>
+		</block>
+		<block name="admin_railingBlackSheet">
+			<property name="Extends" value="railingBlackSheet"/>
+			<property name="CustomIcon" value="railingBlackSheet"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="railingBlackSheet"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/></property>
+		</block>
+		<block name="admin_chainLinkCornerTop">
+			<property name="Extends" value="chainLinkCornerTop"/>
+			<property name="CustomIcon" value="chainLinkCornerTop"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_chainLinkPole">
+			<property name="Extends" value="chainLinkPole"/>
+			<property name="CustomIcon" value="chainLinkPole"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_chainLinkCornerBottom">
+			<property name="Extends" value="chainLinkCornerBottom"/>
+			<property name="CustomIcon" value="chainLinkCornerBottom"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_chainLinkFenceTopPole2">
+			<property name="Extends" value="chainLinkFenceTopPole2"/>
+			<property name="CustomIcon" value="chainLinkFenceTopPole2"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_chainLinkFenceTopPole">
+			<property name="Extends" value="chainLinkFenceTopPole"/>
+			<property name="CustomIcon" value="chainLinkFenceTopPole"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_chainLinkFenceTop">
+			<property name="Extends" value="chainLinkFenceTop"/>
+			<property name="CustomIcon" value="chainLinkFenceTop"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_chainLinkFenceBottomPole">
+			<property name="Extends" value="chainLinkFenceBottomPole"/>
+			<property name="CustomIcon" value="chainLinkFenceBottomPole"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_chainLink">
+			<property name="Extends" value="chainLink"/>
+			<property name="CustomIcon" value="chainLink"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_ladderSteel">
+			<property name="Extends" value="ladderSteel"/>
+			<property name="CustomIcon" value="ladderSteel"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_vaultHatch_v3">
+			<property name="Extends" value="vaultHatch_v3"/>
+			<property name="CustomIcon" value="vaultHatch_v3"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_glassBusinessSheet">
+			<property name="Extends" value="glassBusinessSheet"/>
+			<property name="CustomIcon" value="glassBusinessSheet"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="admin_glassBusinessSheet"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/></property>
+		</block>
+		<block name="admin_glassBulletproofBlock">
+			<property name="Extends" value="glassBulletproofBlock"/>
+			<property name="CustomIcon" value="glassBulletproofMaster"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_streetLightClassic">
+			<property name="Extends" value="streetLightClassic"/>
+			<property name="CustomIcon" value="streetLightClassic"/>
+			<property name="Class" value="PoweredLight"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="OnlySimpleRotations" value="false"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="RuntimeSwitch" value="true"/>
+			<property name="Material" value="Mbedrock"/>
+		</block>
+		<block name="admin_porchLight04">
+			<property name="Extends" value="porchLight01"/>
+			<property name="CustomIcon" value="porchLight04"/>
+			<property name="Class" value="PoweredLight"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="RuntimeSwitch" value="true"/>
+			<property name="OnlySimpleRotations" value="false"/>
+			<property name="Model" value="Entities/Lighting/porchLight04Prefab"/>
+		</block>
+		<block name="admin_ironBars">
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="CustomIcon" value="ironBars" />
+			<property name="Material" value="Mbedrock"/>
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Model" value="iron_bars"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder2" value="0060"/>
+		</block>
+		<block name="Cofre Irrompible">
+			<property name="Class" value="SecureLoot"/>
+			<property name="CustomIcon" value="cntLootChestHero" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Tags" value="door"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="MaxDamage" value="7000"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?loot_cratePrefab.prefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="LootList" value="41"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="156"/>
+			<property name="FilterTags" value="floot,ffurniture"/>
+		</block>
+		<block name="admin_vaultDoor01">
+			<property name="Extends" value="vaultDoor01" />
+			<property name="CustomIcon" value="vaultDoor01" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mbedrock" />
+			<property name="SortOrder1" value="d0j0" />
+			<property name="SortOrder2" value="0050" />
+		</block>
+		<block name="admin_NoUpgradeMaster">
+			<property name="CustomIcon" value="flagstoneNoUpgradeMaster" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Group" value="Building,advBuilding" />
+			<property name="Material" value="Mbedrock" />
+			<property name="Texture" value="226" />
+			<property name="CreativeMode" value="None" />
+			<drop event="Destroy" count="0" />
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1" />
+			<property name="EconomicValue" value="8" />
+			<property name="EconomicBundleSize" value="40" />
+			<property name="FilterTags" value="fbuilding,fbrick" />
+			<property name="SortOrder1" value="40a0" />
+			<property name="SortOrder2" value="0002" />
+		</block>
+		<block name="admin_Master">
+			<property name="CustomIcon" value="flagstoneMaster" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_NoUpgradeMaster" />
+			<property name="CreativeMode" value="None" />
+		</block>
+		<block name="admin_Invisible">
+			<property name="Extends" value="admin_Master" />
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="flagstoneMaster" />
+			<property name="CustomIconTint" value="223,232,252" />
+			<property name="Material" value="Mbedrock" />
+			<property name="Texture" value="226" />
+			<property name="CanPickup" value="true"/>
+			<property name="SortOrder2" value="0150" />
+			<drop event="Fall" count="0" prob="0" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="admin_InvisibleB"/>
+				<property name="Item" value="resourceWood"/>
+				<property name="ItemCount" value="0"/>
+				<property name="UpgradeHitCount" value="1"/></property>
+		</block>
+		<block name="admin_InvisibleB">
+			<property name="Extends" value="admin_Master" />
+			<property name="CreativeMode" value="None"/>
+			<property name="Shape" value="Invisible"/>
+			<property name="Material" value="Mbedrock" />
+			<property name="CanPickup" value="false"/>
+			<property name="SortOrder2" value="0150" />
+			<drop event="Fall" count="0" prob="0" />
+		</block>
+		<block name="admin_Plate">
+			<property name="CustomIcon" value="flagstonePlate" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="Plate" />
+			<property name="SortOrder2" value="0150" />
+			<drop event="Fall" count="0" prob="0" />
+		</block>
+		<block name="admin_CNRFull">
+			<property name="CustomIcon" value="flagstoneCNRFull" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="ramp_outside_corner" />
+			<property name="SortOrder2" value="0210" />
+		</block>
+		<block name="admin_CNRInside">
+			<property name="CustomIcon" value="flagstoneCNRInside" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="ramp_inside_corner" />
+			<property name="SortOrder2" value="0220" />
+		</block>
+		<block name="admin_Wedge">
+			<property name="CustomIcon" value="flagstoneWedge" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge60" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0290" />
+		</block>
+		<block name="admin_CTRpole">
+			<property name="CustomIcon" value="flagstoneCTRpole" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="LightOpacity" value="0" />
+			<property name="Model" value="pole_square_centered" />
+			<property name="SortOrder2" value="0790" />
+			<property name="AllowAllRotations" value="true" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="UseGlobalUV" value="Local" />
+			<drop event="Fall" count="0" prob="0" />
+		</block>
+		<block name="admin_Pole">
+			<property name="CustomIcon" value="flagstonePole" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="LightOpacity" value="0" />
+			<property name="Model" value="pole_square" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="SortOrder2" value="0780" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="UseGlobalUV" value="Local" />
+			<drop event="Fall" count="0" prob="0" />
+			<property name="Group" value="Building,advBuilding" />
+		</block>
+		<block name="admin_Pillar100">
+			<property name="CustomIcon" value="flagstonePillar100" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="Pole1m" />
+			<property name="SortOrder2" value="0732" />
+			<property name="UseGlobalUV" value="Local" />
+			<property name="ImposterExchange" value="imposterBlock" param1="63" />
+		</block>
+		<block name="admin_Pillar50">
+			<property name="CustomIcon" value="flagstonePillar50" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="LightOpacity" value="0" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="Pole0.5m" />
+			<property name="SortOrder2" value="0740" />
+			<property name="UseGlobalUV" value="Local" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="ImposterExchange" value="imposterDontBlockCTRQuarter" param1="63" />
+		</block>
+		<block name="admin_WedgeTipCNRFullTop">
+			<property name="CustomIcon" value="flagstoneWedgeTipCNRFullTop" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge60_corner" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0310" />
+		</block>
+		<block name="admin_WedgeStairs">
+			<property name="CustomIcon" value="flagstoneWedgeStairs" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="wedge_stairs" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0580" />
+		</block>
+		<block name="admin_WedgeTipStairs">
+			<property name="CustomIcon" value="flagstoneWedgeTipStairs" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge_tip_stairs" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0570" />
+		</block>
+		<block name="admin_WedgeTipCNRFullBottom">
+			<property name="CustomIcon" value="flagstoneWedgeTipCNRFullBottom" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge60_tip_corner" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0300" />
+			<drop event="Fall" count="0" prob="0" />
+		</block>
+		<block name="admin_WedgeCNRInsideBottom">
+			<property name="CustomIcon" value="flagstoneWedgeCNRInsideBottom" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge60_inside_corner" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0340" />
+		</block>
+		<block name="admin_Block">
+			<property name="CustomIcon" value="flagstoneBlock" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="SortOrder2" value="0050" />
+		</block>
+		<block name="admin_WedgeCNRInsideTop">
+			<property name="CustomIcon" value="flagstoneWedgeCNRInsideTop" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="wedge60_inside_corner_2" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0350" />
+		</block>
+		<block name="admin_Ramp">
+			<property name="CustomIcon" value="flagstoneRamp" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="ramp" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0200" />
+		</block>
+		<block name="admin_GableInvertedSteep">
+			<property name="CustomIcon" value="flagstoneGableInvertedSteep" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="gable_inverted_steep" />
+			<property name="SortOrder2" value="0420" />
+		</block>
+		<block name="admin_ArrowSlitHalf">
+			<property name="CustomIcon" value="flagstoneArrowSlitHalf" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="LightOpacity" value="6" />
+			<property name="Model" value="arrow_slit_half" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0910" />
+			<property name="ImposterExchange" value="imposterBlock" param1="63" />
+			<property name="DescriptionKey" value="woodArrowSlitGroupDesc" />
+			<property name="Group" value="Building,advBuilding" />
+		</block>
+		<block name="admin_CNRRampFiller">
+			<property name="CustomIcon" value="flagstoneCNRRampFiller" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="ramp_corner_filler" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0240" />
+			<property name="UseGlobalUV" value="Global" />
+		</block>
+		<block name="admin_Gable">
+			<property name="CustomIcon" value="flagstoneGable" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Material" value="Mstone" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge_tip_half" />
+			<property name="SortOrder2" value="0250" />
+			<property name="Texture" value="226" />
+			<drop event="Harvest" name="resourceRockSmall" count="16" tag="allHarvest" />
+			<drop event="Destroy" count="0" />
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1" />
+		</block>
+		<block name="admin_Stairs25CornerCNR">
+			<property name="CustomIcon" value="flagstoneStairs25CornerCNR" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="stairs_filled_corner" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0560" />
+		</block>
+		<block name="admin_WedgeIncline">
+			<property name="CustomIcon" value="flagstoneWedgeIncline" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge60_incline" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0440" />
+			
+         
+         -
+      
+		
+		</block>
+		<block name="admin_CNRRamp">
+			<property name="CustomIcon" value="flagstoneCNRRamp" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="LightOpacity" value="6" />
+			<property name="Model" value="ramp_corner" />
+			<property name="SortOrder2" value="0230" />
+			<property name="ImposterDontBlock" value="true" />
+         
+         -
+      
+		
+		</block>
+		<block name="admin_Pyramid">
+			<property name="CustomIcon" value="flagstonePyramid" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="pyramid" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="SortOrder2" value="0260" />
+			
+         
+         -
+      
+		
+		</block>
+		<block name="admin_Arch3m">
+			<property name="CustomIcon" value="flagstoneArch3m" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_NoUpgradeMaster" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="arch_3m" />
+			<property name="UseGlobalUV" value="Local" />
+			<drop event="Fall" count="0" prob="0" />
+		</block>
+		<block name="admin_Arch3m_tip">
+			<property name="CustomIcon" value="flagstoneArch3m_tip" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Arch3m" />
+			<property name="Model" value="arch_3m_tip" />
+		</block>
+		<block name="admin_Arch3m_center">
+			<property name="CustomIcon" value="flagstoneArch3m_center" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Arch3m" />
+			<property name="Model" value="arch_3m_center" />
+		</block>
+		<block name="admin_WedgeCNRInsideSteepTop">
+			<property name="CustomIcon" value="flagstoneWedgeCNRInsideSteepTop" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge_inside_corner_base" />
+			<property name="SortOrder2" value="0370" />
+		</block>
+		<block name="admin_QuarterCNR">
+			<property name="CustomIcon" value="flagstoneQuarterCNR" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="quarter_inside_corner" />
+			<property name="SortOrder2" value="0080" />
+			<property name="DescriptionKey" value="shapeQuarterCNRGroupDesc" />
+		</block>
+		<block name="admin_Half">
+			<property name="CustomIcon" value="flagstoneHalf" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="cube_half" />
+			<property name="SortOrder2" value="0060" />
+		</block>
+		<block name="admin_Arch">
+			<property name="CustomIcon" value="flagstoneArch" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="Arch" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0500" />
+		</block>
+		<block name="admin_Stairs25">
+			<property name="CustomIcon" value="flagstoneStairs25" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="StairsFilledVerticalUV" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0530" />
+			<property name="Stairs" />
+			<property name="ImposterExchange" value="imposterRamp" param1="63" />
+			<property name="Group" value="Building,advBuilding" />
+		</block>
+		<block name="admin_Stairs50">
+			<property name="CustomIcon" value="flagstoneStairs50" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="stairs_filled_quarter_vertical_uv" />
+			<property name="SortOrder2" value="0590" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="UseGlobalUV" value="Global" />
+			<property name="Stairs" />
+		</block>
+		<block name="admin_WedgeTip">
+			<property name="CustomIcon" value="flagstoneWedgeTip" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge60_tip" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0280" />
+		</block>
+		<block name="admin_WedgeCNRSteepTop">
+			<property name="CustomIcon" value="flagstoneWedgeCNRSteepTop" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge60_tip_corner_top" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="SortOrder2" value="0330" />
+			<drop event="Fall" count="0" prob="0" />
+		</block>
+		<block name="admin_QuarterTeeSCtr">
+			<property name="CustomIcon" value="flagstoneQuarterTeeSCtr" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="quarter_t_centered" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="SortOrder2" value="0110" />
+			<property name="DescriptionKey" value="shapeQuarterTeeSCtrGroupDesc" />
+		</block>
+		<block name="admin_WedgeCNRSteepBase">
+			<property name="CustomIcon" value="flagstoneWedgeCNRSteepBase" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge60_tip_corner_base" />
+			<property name="SortOrder2" value="0320" />
+		</block>
+		<block name="admin_QuarterSCtr">
+			<property name="CustomIcon" value="flagstoneQuarterSCtr" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="quarter_centered_wall" />
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="SortOrder2" value="0110" />
+			<property name="DescriptionKey" value="shapeQuarterSCtrGroupDesc" />
+			<property name="UseGlobalUV" value="Global" />
+		</block>
+		<block name="admin_QuarterCNR3Way">
+			<property name="CustomIcon" value="flagstoneQuarterCNR3Way" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="quarter_inside_corner_3way" />
+			<property name="SortOrder2" value="0090" />
+			<property name="DescriptionKey" value="shapeQuarterCNR3WayGroupDesc" />
+		</block>
+		<block name="admin_WedgeCNRInsideSteepBase">
+			<property name="CustomIcon" value="flagstoneWedgeCNRInsideSteepBase" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="wedge_inside_corner_top" />
+			<property name="SortOrder2" value="0360" />
+		</block>
+		<block name="admin_GableQuarter">
+			<property name="CustomIcon" value="flagstoneGableQuarter" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="wedge_tip_quarter" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="SortOrder2" value="0390" />
+			<drop event="Fall" count="0" prob="0" />
+		</block>
+		<block name="admin_GableInvertedQuarter">
+			<property name="CustomIcon" value="flagstoneGableInvertedQuarter" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="gable_inverted_quarter" />
+			<property name="SortOrder2" value="0400" />
+		</block>
+		<block name="admin_GableInvertedHalf">
+			<property name="CustomIcon" value="flagstoneGableInvertedHalf" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Path" value="solid" />
+			<property name="Model" value="gable_inverted_half" />
+			<property name="SortOrder2" value="0255" />
+		</block>
+		<block name="admin_PlateOffset">
+			<property name="CustomIcon" value="flagstonePlateOffset" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="Extends" value="admin_Master" />
+			<property name="Shape" value="New" />
+			<property name="Model" value="tube_center_straight" />
+			<property name="SortOrder2" value="0171" />
+		</block>
+		<block name="admin_BlockVariantHelper">
+			<property name="Extends" value="flagstoneBlock" />
+			<property name="CustomIcon" value="flagstoneBlock" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="DescriptionKey" value="blockVariantHelperGroupDesc" />
+			<property name="ItemTypeIcon" value="all_blocks" />
+			<property name="SelectAlternates" value="true" />
+			<property name="PlaceAltBlockValue" value="admin_Block,admin_Ramp,admin_Arch,admin_ArrowSlitHalf,admin_CNRFull,admin_CNRInside,admin_CNRRamp,admin_CNRRampFiller,admin_CTRpole,admin_GableInvertedHalf,admin_GableInvertedQuarter,admin_GableInvertedSteep,admin_GableQuarter,admin_Half,admin_Pillar100,admin_Pillar50,admin_Plate,admin_Pole,admin_Pyramid,admin_QuarterCNR,admin_QuarterCNR3Way,admin_QuarterSCtr,admin_QuarterTeeSCtr,admin_Stairs25,admin_Stairs25CornerCNR,admin_Wedge,admin_WedgeCNRInsideBottom,admin_WedgeCNRInsideSteepBase,admin_WedgeCNRInsideSteepTop,admin_WedgeCNRInsideTop,admin_WedgeCNRSteepBase,admin_WedgeCNRSteepTop,admin_WedgeIncline,admin_WedgeStairs,admin_WedgeTip,admin_WedgeTipCNRFullBottom,admin_WedgeTipCNRFullTop,admin_WedgeTipStairs" />
+		</block>
+		<block name="admin_Mine">
+			<property name="Class" value="Mine"/>
+			<property name="CustomIcon" value="mineCandyTin" />
+			<property name="CustomIconTint" value="3,232,252" />
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="Shape" value="Ext3dModel"/>
+			<property name="Texture" value="293"/>
+			<property name="Mesh" value="models"/>
+			<property name="Model" value="Traps/trap_mine_filter" param1="main_mesh"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Collide" value="movement"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="MaxDamage" value="4"/>
+			<property name="TriggerDelay" value="0"/>
+			<property name="TriggerSound" value="landmine_trigger"/>
+			<property name="Explosion.ParticleIndex" value="11"/>
+			<property name="Explosion.RadiusBlocks" value="2"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.BlockDamage" value="10"/>
+			<property name="Explosion.EntityDamage" value="500"/>
+			<property name="Explosion.DamageBonus.stone" value="0.1"/>
+			<property name="Explosion.DamageBonus.metal" value="0.1"/>
+			<property name="Explosion.DamageBonus.earth" value="0"/>
+			<property name="Explosion.DamageBonus.wood" value="0"/>
+			<property name="Explosion.DamageBonus.water" value="0"/>
+			<property name="CanPickup" value="false"/>
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="EconomicValue" value="97"/>
+			<property name="FilterTags" value="fdecor,ftraps"/>
+			<property name="SortOrder1" value="70g0"/>
+		</block>
+	</append>
+</configs>
+

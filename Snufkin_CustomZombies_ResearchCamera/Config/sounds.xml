@@ -1,0 +1,37 @@
+<configs>
+	<append xpath="/Sounds">
+		<SoundDataNode name="camera_fire">
+			<AudioSource name="Sounds/AudioSource_WeaponFire"/>
+			<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+			<Noise ID="2" noise="11" time="4" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Electricity/Turret/Spinup"/>
+			<LocalCrouchVolumeScale value="1"/>
+			<CrouchNoiseScale value="1"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="6"/>
+			<MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="camera_ok">
+			<AudioSource name="Sounds/AudioSource_WeaponFire"/>
+			<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+			<Noise ID="2" noise="11" time="4" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Misc/unlocking"/>
+			<LocalCrouchVolumeScale value="1"/>
+			<CrouchNoiseScale value="1"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="6"/>
+			<MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+		<SoundDataNode name="camera_final">
+			<AudioSource name="Sounds/AudioSource_WeaponFire"/>
+			<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+			<Noise ID="2" noise="11" time="4" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Misc/read_skillbook_final"/>
+			<LocalCrouchVolumeScale value="1"/>
+			<CrouchNoiseScale value="1"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="6"/>
+			<MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
+	</append>
+</configs>

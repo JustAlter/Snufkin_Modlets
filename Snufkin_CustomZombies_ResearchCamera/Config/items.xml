@@ -1,0 +1,248 @@
+<configs>
+	<append xpath="/items">
+		<item name="Research Camera">
+			<property name="CustomIcon" value="motionsensor"/>
+			<property name="CustomIconTint" value="180,180,255"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="1"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
+			<property name="Material" value="MelectricParts"/>
+			<property name="Weight" value="8"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="CrosshairOnAim" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Sound_Sight_In" value="pistol_sight_in"/>
+			<property name="Sound_Sight_Out" value="pistol_sight_out"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="ShowQuality" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Magazine_items" value="Photographic film"/>
+				<property name="Sound_start" value="camera_fire"/>
+				<property name="Sound_loop" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="true"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="CrosshairOnAim" value="false"/>
+				<property name="Zoom_overlay" value="#Other/Items?Weapons/HUD/sniper_zoom_overlay.tga"/>
+				<property name="Zoom_max_out" value="30"/>
+				<property name="Zoom_max_in" value="20"/>
+			</property>
+			<effect_group name="Research Camera" tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Clip_M"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Gun_M"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Slide_M"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Clip_M"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Gun_M"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Slide_M"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToHeldItem" prefab="Entities/Electrical/motion_sensorPrefab" local_offset="0,-.3,.2" parent_transform="Handle"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="turret_cone"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Base_LOD1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Base_LOD2"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Base_LOD0"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Arm_LOD1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Arm_LOD2"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Camera_LOD1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="SetTransformActive" active="false" transform_path="Camera_LOD2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="turret_cone"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Base_LOD1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Base_LOD2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Base_LOD0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Arm_LOD1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Arm_LOD2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Camera_LOD1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="true" transform_path="Camera_LOD2"/>
+				<passive_effect name="MaxRange" operation="base_set" value="100"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="100"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="30"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="30"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+				<passive_effect name="BlockDamage" operation="perc_set" value="0"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".5"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.2"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".2"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="1"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="500" />
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+			</effect_group >
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_ok">
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="scorcherresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="scorcherresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="scorcher"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="bansheeresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="bansheeresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="banshee"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="mantisresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="mantisresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="mantis"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="geistresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="geistresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="geist"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="scarecrowresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="scarecrowresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="scarecrow"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="sirenresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="sirenresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="siren"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="undertakerresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="undertakerresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="undertaker"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="bomberresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="bomberresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="bomber"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="juggernautresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="juggernautresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="juggernaut"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="cowheadresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="cowheadresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="cowhead"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="parasiteresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="parasiteresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="parasite"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="wendigoresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="wendigoresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="wendigo"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="wrestlerresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="wrestlerresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="wrestler"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="archonresearch" operation="add" value=".01">
+					<requirement name="CVarCompare" cvar="archonresearch" operation="LT" value=".25"/>
+					<requirement name="EntityTagCompare" target="other" tags="archon"/>
+					<requirement name="NotHasBuff" target="other" buff="ResearchCameraTagged"/>
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="scorcher"/>
+					<requirement name="CVarCompare" cvar="scorcherresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="banshee"/>
+					<requirement name="CVarCompare" cvar="bansheeresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="mantis"/>
+					<requirement name="CVarCompare" cvar="mantisresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="geist"/>
+					<requirement name="CVarCompare" cvar="geistresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="scarecrow"/>
+					<requirement name="CVarCompare" cvar="scarecrowresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="siren"/>
+					<requirement name="CVarCompare" cvar="sirenresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="undertaker"/>
+					<requirement name="CVarCompare" cvar="undertakerresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="bomber"/>
+					<requirement name="CVarCompare" cvar="bomberresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="archon"/>
+					<requirement name="CVarCompare" cvar="archonresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="wrestler"/>
+					<requirement name="CVarCompare" cvar="wrestlerresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="wendigo"/>
+					<requirement name="CVarCompare" cvar="wendigoresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="parasite"/>
+					<requirement name="CVarCompare" cvar="parasiteresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="cowhead"/>
+					<requirement name="CVarCompare" cvar="cowheadresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" sound="camera_final">
+					<requirement name="EntityTagCompare" target="other" tags="juggernaut"/>
+					<requirement name="CVarCompare" cvar="juggernautresearch" operation="GTE" value=".25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="ResearchCameraTagged"/>
+			</effect_group>
+		</item>
+		<item name="Photographic film">
+			<property name="Tags" value="ammo"/>
+			<property name="CustomIcon" value="modArmorInsulatedLiner"/>
+			<property name="CustomIconTint" value="180,180,255"/>
+			<property name="DisplayType" value="ammoBullet"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapPolymers"/>
+			<property name="Stacknumber" value="300"/>
+			<property name="EconomicValue" value="9"/>
+			<property name="Group" value="Ammo/Weapons"/>
+		</item>
+		<item name="Research Points"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Archon Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Banshee Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Bomber Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Cowhead Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Geist Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Juggernaut Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Mantis Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Parasite Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Scarecrow Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Scorcher Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Siren Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Undertaker Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Wendigo Research"><property name="Extends" value="resourcePaper"/></item>
+		<item name="Wrestler Research"><property name="Extends" value="resourcePaper"/></item>
+	</append>
+</configs>

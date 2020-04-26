@@ -1,0 +1,66 @@
+<config>
+	<append xpath="/controls">
+		<researchrecipe_entry>
+			<rect  style="press, hover" pivot="center" controller="RecipeEntry" >
+				<sprite  name="background" pivot="center" width="1071" height="314" type="sliced">
+					<texture   pivot="center" height="314" width="1071" texture="@https://i.imgur.com/fDGBB5k.png"/>
+				</sprite>
+				<sprite  name="Icon" size="0,0"/>
+				<label  name="Name" width="0" height="0" font_size="0"/>
+			</rect>
+		</researchrecipe_entry>
+		<research_entry>
+			<rect name="row" width="500" height="40" controller="IngredientEntry">
+				<rect depth="2" width="500" height="40">
+					<sprite depth="3" name="background" pos="9999,9999"/>
+					<sprite depth="2" name="highlightOverlay" pos="9999,9999"/>
+					<sprite depth="6" name="itemIcon" pos="9999,9999"/>
+					<label depth="7" pos="-200,0" width="200" height="28" color="[white]"  text="{itemname}" font_size="26" effect="outline" justify="right" pivot="left"/>
+					<label depth="7" name="stackValue" pos="200,0" width="70" height="28" text="" font_size="26" effect="outline" justify="right" pivot="left"/>
+					<label depth="3" name="needCount" pos="9999,9999" width="0" height="0" font_size="0" />
+					<sprite depth="3" pivot="left" pos="30,0" color="255,0,0,255" type="sliced" height="30" width="{needcount}"/>
+					<texture depth="4" pivot="left" pos="13,-2" height="50" width="350" texture="@https://i.imgur.com/UJCDFu2.png"/>
+					<sprite depth="2" pivot="left" pos="30,0" color="0,0,0,120" type="sliced" height="30" width="310"/>
+				</rect>
+				<rect controller="CharacterFrameWindow">
+					<panel name="header" pos="99999,99999" width="0" height="0">
+						<sprite depth="2" name="windowIcon" pos="99999,99999" width="0" height="0"/>
+						<label depth="2" name="characterName" pos="99999,99999" width="0" height="0"/>
+						<sprite depth="2" name="windowIcon" pos="99999,99999" width="0" height="0"/>
+						<label depth="2" name="levelNumber" pos="99999,99999" width="0" height="0"/>
+					</panel>
+					<rect depth="1" name="searchControls">
+						<sprite depth="8" name="backgroundMain" pos="99999,99999" width="0" height="0"/>
+						<button depth="9" name="characterButton" visible="{showstats}" style="press" width="1" height="1" color="0,0,0,0" hoverscale="1"  pos="0,0" collider_scale="999999" pivot="center" selected="true"/>
+						<button depth="8" name="statButton"  style="press" width="210" height="30" hoverscale="1.05"  pos="-100,0" selectedcolor="100,100,100,150" hovercolor="100,100,100,100" defaultcolor="100,100,100,50" pivot="center" sound_play_on_hover="[default_hover]"/>
+						<button depth="4" name="coreStatButton" style="icon30px, press" pos="99999,99999" width="0" height="0" sprite="ui_game_symbol_trophy" pivot="center"/>
+					</rect>
+					<rect>
+						<panel name="previewFrame" pos="99999,99999" width="0" height="0">
+							<rect>
+								<sprite depth="8" name="backgroundMain" pos="99999,99999" width="0" height="0"/>
+								<texture depth="2" name="playerPreview" pos="99999,99999" size="1,1"/>
+							</rect>
+						</panel>
+						<panel name="equipment" pos="99999,99999" width="0" height="0">
+							<grid name="inventory"/>
+						</panel>
+					</rect>
+					<rect visible="{showcharacter}"/>
+					<rect visible="{showstats}" pos="450,-350">
+						<texture width="180" height="214" pos="-50,${name*50-200}" texture="@https://i.imgur.com/tTBntbG.png" pivot="left">
+							<rect pos="90,-7" >
+								<label width="300" height="28" color="73, 255, 0" pos="0,40" text="${health}" font_size="26" effect="outline" pivot="left" />
+								<label width="300" height="28" color="73, 255, 0" pos="85,-0" text="${edamage}" font_size="26" effect="outline" pivot="left" />
+								<label width="300" height="28" color="73, 255, 0" pos="80,-40" text="${bdamage}" font_size="26" effect="outline" pivot="left" />
+								<label width="300" height="84" color="73, 255, 0" pos="0,-68" text="${skills}" font_size="26" effect="outline" pivot="topleft" />
+							</rect> 
+						</texture> 
+						<texture width="839" height="745" pos="0,${name*50}" texture="@https://i.imgur.com/${texture}.png" pivot="left"  />
+					</rect>
+					<rect visible="{showcore}"/>
+				</rect>
+			</rect>
+		</research_entry>
+	</append>
+</config>

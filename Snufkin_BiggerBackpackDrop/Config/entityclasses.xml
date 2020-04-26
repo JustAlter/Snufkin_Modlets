@@ -1,0 +1,3 @@
+<configs>
+	<set xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='Mesh']/@value">#Entities/LootContainers?weapon_bags_largePrefab.prefab</set>
+</configs>

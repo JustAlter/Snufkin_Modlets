@@ -1,0 +1,4 @@
+<configs>
+	<set xpath="/materials/material[@id='MLandMine']/property[@name='stability_glue']/@value">40</set>
+	<set xpath="/materials/material[@id='MLandMine']/property[@name='MaxDamage']/@value">2</set>
+</configs>

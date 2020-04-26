@@ -1,0 +1,30 @@
+<configs>
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="FuseRad" display_group="groupAmmo">
+			<display_entry name="radChance" title_key="Radiation Chance" display_type="Percent"/>
+			<display_entry name="radEffect" title_key="Radiation Duration" display_type="Time"/>
+		</item_display_info>
+		<item_display_info display_type="FuseFlm" display_group="groupAmmo">
+			<display_entry name="brnChance" title_key="Burning Chance" display_type="Percent"/>
+			<display_entry name="brnEffect" title_key="Burning Duration" display_type="Time"/>
+		</item_display_info>
+		<item_display_info display_type="FuseShk" display_group="groupAmmo">
+			<display_entry name="shkChance" title_key="Shock Chance" display_type="Percent"/>
+		</item_display_info>
+		<item_display_info display_type="FuseStr" display_group="groupAmmo" >
+			<display_entry name="AttributeLevel" tags="attStrength" title_key="statShowStrength" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="FusePer" display_group="groupAmmo" >
+			<display_entry name="AttributeLevel" tags="attPerception" title_key="statShowPerception" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="FuseFor" display_group="groupAmmo" >
+			<display_entry name="AttributeLevel" tags="attFortitude" title_key="statShowFortitude" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="FuseAgi" display_group="groupAmmo" >
+			<display_entry name="AttributeLevel" tags="attAgility" title_key="statShowAgility" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="FuseInt" display_group="groupAmmo" >
+			<display_entry name="AttributeLevel" tags="attIntellect" title_key="statShowIntellect" display_leading_plus="true"/>
+		</item_display_info>
+	</append>
+</configs>

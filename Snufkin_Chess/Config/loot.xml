@@ -1,0 +1,6 @@
+<configs>
+<append xpath="/lootcontainers">
+	<lootcontainer id="960" count="0" size="8,8" sound_open="charge_beep" open_time="0" sound_close="charge_beep" loot_quality_template="qualBaseTemplate">
+	</lootcontainer>
+</append> 
+</configs>

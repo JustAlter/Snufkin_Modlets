@@ -1,0 +1,46 @@
+<configs>
+	<append xpath="/blocks">
+		<block name="metalReinforcedWoodDrawBridgeDouble">
+			<property name="CustomIcon" value="metalReinforcedWoodDrawBridge"/>
+			<property name="CustomIconTint" value="255,255,0" />
+			<property name="Group" value="Building"/>
+			<property name="Class" value="DrawBridge"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="LightOpacity" value="1"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="241"/>
+			<property name="Model" value="Entities/Doors/bridge_wood_doublePrefab"/>
+			<property name="MultiBlockDim" value="4,1,12"/>
+			<property name="BlockTag" value="Door"/>
+			<property name="OpenSound" value="open_bridge"/>
+			<property name="CloseSound" value="close_bridge"/>
+			<property name="Place" value="DrawBridge"/>
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="OnlySimpleRotations" value="false"/>
+			<property name="AllowAllRotations" value="true"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="100"/>
+				<property name="resourceWood" value="2000"/></property>
+			<drop event="Harvest" name="resourceScrapIron" count="400" prob="1" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="800" prob="1" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceSpring" count="4,12" prob="1" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceMechanicalParts" count="4,20" prob="1" tag="salvageHarvest"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="DescriptionKey" value="drawBridgeGroupDesc"/>
+			<property name="ActivationDistance" value="14"/>
+			<property name="FilterTags" value="fdecor,fdoors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+		</block>
+		<block name="metalReinforcedWoodDrawBridgeDoublePowered">
+			<property name="CustomIcon" value="metalReinforcedWoodDrawBridge"/>
+			<property name="CustomIconTint" value="255,255,0" />
+			<property name="Extends" value="metalReinforcedWoodDrawBridgeDouble" />
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+		</block>
+	</append>
+</configs>
