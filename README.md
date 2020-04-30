@@ -33,7 +33,7 @@ Just unlocks the double drawbridge for crafting.
 Adds a 4 bar 3 stage healthbar to the zombies and animals.
 
 # Snufkin_JunktTurretFlashlight
-Attaches a flaslight to the Junk Turrets, useful on the Bloodmoons.
+Attaches a flashlight to the Junk Turrets, useful on the Bloodmoons.
 
 # Snufkin_NerfExplosives
 A little tweaking on the explosive damage, reducing the damage of rockets and dynamite to blocks and increasing the damage of the explosive arrows/bolts to entities.
