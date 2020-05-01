@@ -1,6 +1,6 @@
 <configs>
-	<set xpath="/entity_classes/entity_class[starts-with(@name, 'garageDoor')]/property[@name='OnlySimpleRotations']/@value">false</set>
-	<append xpath="/entity_classes/entity_class[starts-with(@name, 'garageDoor')]">
+	<set xpath="/blocks/block[starts-with(@name, 'garageDoor')]/property[@name='OnlySimpleRotations']/@value">false</set>
+	<append xpath="/blocks/block[starts-with(@name, 'garageDoor')]">
 		<property name="AllowAllRotations" value="true"/>
 	</append>
 	<append xpath="/blocks">
