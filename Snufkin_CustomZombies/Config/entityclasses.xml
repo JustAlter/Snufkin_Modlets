@@ -187,7 +187,6 @@
 			<property name="AITarget-1" value=""/>
 			<property name="SightRange" value="300"/>
 			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="GeistDeco"/>
 				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
