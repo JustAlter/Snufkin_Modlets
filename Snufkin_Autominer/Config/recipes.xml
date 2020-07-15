@@ -1,27 +1,27 @@
 <configs>
 	<append xpath="/recipes">
-		<recipe name="resourceOilShale" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolAuger">
+		<recipe name="resourceOilShale" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolPickT3Auger">
 			<ingredient name="ammoGasCan" count="1000"/>
 		</recipe>
-		<recipe name="resourceClayLump" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolAuger">
+		<recipe name="resourceClayLump" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolPickT3Auger">
 			<ingredient name="ammoGasCan" count="1000"/>
 		</recipe>
-		<recipe name="resourceScrapBrass" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolAuger">
+		<recipe name="resourceScrapBrass" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolPickT3Auger">
 			<ingredient name="ammoGasCan" count="1000"/>
 		</recipe>
-		<recipe name="resourceCoal" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolAuger">
+		<recipe name="resourceCoal" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolPickT3Auger">
 			<ingredient name="ammoGasCan" count="1000"/>
 		</recipe>
-		<recipe name="resourceScrapIron" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolAuger">
+		<recipe name="resourceScrapIron" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolPickT3Auger">
 			<ingredient name="ammoGasCan" count="1000"/>
 		</recipe>
-		<recipe name="resourceScrapLead" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolAuger">
+		<recipe name="resourceScrapLead" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolPickT3Auger">
 			<ingredient name="ammoGasCan" count="1000"/>
 		</recipe>
-		<recipe name="resourceRockSmall" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolAuger">
+		<recipe name="resourceRockSmall" count="1000" craft_area="AutoMiner" craft_time="3660" tags="autominer" craft_tool="meleeToolPickT3Auger">
 			<ingredient name="ammoGasCan" count="1000"/>
 		</recipe>
-		<recipe name="resourcePotassiumNitratePowder" count="1000" craft_time="3660" craft_area="AutoMiner" tags="autominer" craft_tool="meleeToolAuger">
+		<recipe name="resourcePotassiumNitratePowder" count="1000" craft_time="3660" craft_area="AutoMiner" tags="autominer" craft_tool="meleeToolPickT3Auger">
 			<ingredient name="ammoGasCan" count="1000"/>
 		</recipe>
 		<recipe name="AutoMiner" count="1" craft_time="300" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
